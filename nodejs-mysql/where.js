@@ -19,3 +19,14 @@ export function where() {
     });
   });
 }
+
+export function wildcardCharacters() {
+  connection.connect(function (error) {
+    if (error) throw error;
+    const sql = `SELECT * FROM customers WHERE address LIKE "S%"`;
+    connection.query(sql, function (error, result) {
+      if (error) throw error;
+      console.log(result);
+    });
+  });
+}

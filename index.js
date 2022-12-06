@@ -4,7 +4,12 @@ import {
   createCustomerTable,
   createUserTable,
 } from "./lessons/create-table.js";
-import { insertInto, insertIntoMany } from "./lessons/insert-into.js";
+import {
+  insertInto,
+  insertIntoGetId,
+  insertIntoMany,
+} from "./lessons/insert-into.js";
+import { selectFrom } from "./lessons/select-from.js";
 import { showDatabases } from "./lessons/show-databases.js";
 
 // showDatabases();
@@ -13,4 +18,6 @@ import { showDatabases } from "./lessons/show-databases.js";
 // createUserTable();
 // alterCustomerTable();
 // insertInto();
-insertIntoMany();
+// insertIntoMany();
+// insertIntoGetId();
+selectFrom();

@@ -9,6 +9,7 @@ import {
   insertIntoGetId,
   insertIntoMany,
 } from "./nodejs-mysql/insert-into.js";
+import { orderBy } from "./nodejs-mysql/order-by.js";
 import {
   fieldsObject,
   selectFrom,
@@ -38,4 +39,5 @@ import {
 // wildcardCharacters();
 // escapingQueryValues("Mountain 21");
 // placeholder("Mountain 21");
-multiplePlaceholders("Mountain 21", "Amy");
+// multiplePlaceholders("Mountain 21", "Amy");
+orderBy();

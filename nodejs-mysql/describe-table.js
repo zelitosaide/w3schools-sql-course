@@ -12,7 +12,7 @@ const connection = mysql.createConnection({
 export function describeTable() {
   connection.connect(function (error) {
     if (error) throw error;
-    connection.query("DESCRIBE TABLE customers", function (error, result) {
+    connection.query("DESCRIBE customers", function (error, result) {
       if (error) throw error;
       console.log(result);
     });

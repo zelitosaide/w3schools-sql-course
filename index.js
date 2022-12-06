@@ -15,6 +15,7 @@ import {
   selectFromSomeColumns,
 } from "./nodejs-mysql/select-from.js";
 import { showDatabases } from "./nodejs-mysql/show-databases.js";
+import { where } from "./nodejs-mysql/where.js";
 
 // showDatabases();
 // createDatabase();
@@ -26,4 +27,5 @@ import { showDatabases } from "./nodejs-mysql/show-databases.js";
 // insertIntoGetId();
 // selectFrom();
 // selectFromSomeColumns();
-fieldsObject();
+// fieldsObject();
+where();

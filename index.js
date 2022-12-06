@@ -4,6 +4,7 @@ import {
   createCustomerTable,
   createUserTable,
 } from "./nodejs-mysql/create-table.js";
+import { deleteRows } from "./nodejs-mysql/delete.js";
 import {
   insertInto,
   insertIntoGetId,
@@ -41,4 +42,5 @@ import {
 // placeholder("Mountain 21");
 // multiplePlaceholders("Mountain 21", "Amy");
 // orderBy();
-orderByDesc();
+// orderByDesc();
+// deleteRows();

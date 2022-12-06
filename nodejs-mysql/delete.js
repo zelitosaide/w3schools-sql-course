@@ -9,7 +9,7 @@ const connection = mysql.createConnection({
   database: process.env.DATABASE,
 });
 
-export function deleteRow() {
+export function deleteRows() {
   connection.connect(function (error) {
     if (error) throw error;
     const sql = `DELETE FROM customers WHERE address = "Mountain 21"`;

@@ -15,7 +15,12 @@ import {
   selectFromSomeColumns,
 } from "./nodejs-mysql/select-from.js";
 import { showDatabases } from "./nodejs-mysql/show-databases.js";
-import { where, wildcardCharacters } from "./nodejs-mysql/where.js";
+import {
+  escapingQueryValues,
+  placeholder,
+  where,
+  wildcardCharacters,
+} from "./nodejs-mysql/where.js";
 
 // showDatabases();
 // createDatabase();
@@ -29,4 +34,6 @@ import { where, wildcardCharacters } from "./nodejs-mysql/where.js";
 // selectFromSomeColumns();
 // fieldsObject();
 // where();
-wildcardCharacters();
+// wildcardCharacters();
+// escapingQueryValues("Mountain 21");
+placeholder("Mountain 21");

@@ -44,3 +44,14 @@ export function escapingQueryValues(address) {
     });
   });
 }
+
+export function placeholder(address) {
+  connection.connect(function (error) {
+    if (error) throw error;
+    const sql = `SELECT * FROM customers WHERE address = ?`;
+    connection.query(sql, [address], function (error, result) {
+      if (error) throw error;
+      console.log(result);
+    });
+  });
+}

@@ -20,4 +20,4 @@ import { showDatabases } from "./lessons/show-databases.js";
 // insertInto();
 // insertIntoMany();
 // insertIntoGetId();
-selectFrom();
+// selectFrom();

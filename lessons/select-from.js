@@ -19,3 +19,14 @@ export function selectFrom() {
     });
   });
 }
+
+export function selectFromSomeColumns() {
+  connection.connect(function (error) {
+    if (error) throw error;
+    const sql = `SELECT name, address FROM customers LIMIT 3`;
+    connection.query(sql, function (error, result, fields) {
+      if (error) throw error;
+      console.log(result);
+    });
+  });
+}

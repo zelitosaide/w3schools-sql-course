@@ -1,20 +1,20 @@
-import { createDatabase } from "./lessons/create-database.js";
+import { createDatabase } from "./nodejs-mysql/create-database.js";
 import {
   alterCustomerTable,
   createCustomerTable,
   createUserTable,
-} from "./lessons/create-table.js";
+} from "./nodejs-mysql/create-table.js";
 import {
   insertInto,
   insertIntoGetId,
   insertIntoMany,
-} from "./lessons/insert-into.js";
+} from "./nodejs-mysql/insert-into.js";
 import {
   fieldsObject,
   selectFrom,
   selectFromSomeColumns,
-} from "./lessons/select-from.js";
-import { showDatabases } from "./lessons/show-databases.js";
+} from "./nodejs-mysql/select-from.js";
+import { showDatabases } from "./nodejs-mysql/show-databases.js";
 
 // showDatabases();
 // createDatabase();

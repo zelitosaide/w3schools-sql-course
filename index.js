@@ -9,6 +9,7 @@ import {
   deleteManyRows,
   deleteRows,
 } from "./nodejs-mysql/delete.js";
+import { dropTable } from "./nodejs-mysql/drop-table.js";
 import {
   insertInto,
   insertIntoGetId,
@@ -52,3 +53,4 @@ import {
 // deleteManyRows();
 // clearEntireTable();
 // showTables();
+// dropTable();

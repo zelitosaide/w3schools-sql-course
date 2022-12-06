@@ -17,6 +17,7 @@ import {
 import { showDatabases } from "./nodejs-mysql/show-databases.js";
 import {
   escapingQueryValues,
+  multiplePlaceholders,
   placeholder,
   where,
   wildcardCharacters,
@@ -36,4 +37,5 @@ import {
 // where();
 // wildcardCharacters();
 // escapingQueryValues("Mountain 21");
-placeholder("Mountain 21");
+// placeholder("Mountain 21");
+multiplePlaceholders("Mountain 21", "Amy");

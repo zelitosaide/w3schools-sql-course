@@ -55,3 +55,14 @@ export function placeholder(address) {
     });
   });
 }
+
+export function multiplePlaceholders(address, name) {
+  connection.connect(function (error) {
+    if (error) throw error;
+    const sql = `SELECT * FROM customers WHERE address = ? OR name = ?`;
+    connection.query(sql, [address, name], function (error, result) {
+      if (error) throw error;
+      console.log(result);
+    });
+  });
+}

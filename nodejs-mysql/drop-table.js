@@ -18,3 +18,14 @@ export function dropTable() {
     });
   });
 }
+
+export function dropTableIfExists() {
+  connection.connect(function (error) {
+    if (error) throw error;
+    const sql = "DROP TABLE IF EXISTS customers";
+    connection.query(sql, function (error, result) {
+      if (error) throw error;
+      console.log(result);
+    });
+  });
+}

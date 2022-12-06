@@ -30,3 +30,14 @@ export function deleteManyRows() {
     });
   });
 }
+
+export function clearEntireTable() {
+  connection.connect(function (error) {
+    if (error) throw error;
+    const sql = "DELETE FROM customers";
+    connection.query(sql, function (error, result) {
+      if (error) throw error;
+      console.log("Number of records deleted: " + result.affectedRows);
+    });
+  });
+}

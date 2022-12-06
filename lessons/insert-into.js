@@ -46,3 +46,14 @@ export function insertIntoMany() {
     });
   });
 }
+
+export function insertIntoGetId() {
+  connection.connect(function (error) {
+    if (error) error;
+    const sql = `INSERT INTO customers (name, address) VALUES ("Michelle", "Blue Village 1")`;
+    connection.query(sql, function (error, result) {
+      if (error) throw error;
+      console.log(result.insertId);
+    });
+  });
+}

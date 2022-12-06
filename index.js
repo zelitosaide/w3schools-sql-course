@@ -51,4 +51,4 @@ import {
 // deleteRows();
 // deleteManyRows();
 // clearEntireTable();
-showTables();
+// showTables();

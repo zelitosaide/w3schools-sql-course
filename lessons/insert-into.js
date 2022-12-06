@@ -12,7 +12,7 @@ const connection = mysql.createConnection({
 export function insertInto() {
   connection.connect(function (error) {
     if (error) throw error;
-    const sql = `INSERT INTO customers (name, adddress) VALUES ("Company Inc", "Highway 37")`;
+    const sql = `INSERT INTO customers (name, address) VALUES ("Company Inc", "Highway 37")`;
     connection.query(sql, function (error, result) {
       if (error) throw error;
       console.log(result);

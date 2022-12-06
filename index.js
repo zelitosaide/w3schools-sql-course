@@ -4,10 +4,12 @@ import {
   createCustomerTable,
   createUserTable,
 } from "./lessons/create-table.js";
+import { insertInto } from "./lessons/insert-into.js";
 import { showDatabases } from "./lessons/show-databases.js";
 
 // showDatabases();
 // createDatabase();
 // createCustomerTable();
 // createUserTable();
-alterCustomerTable();
+// alterCustomerTable();
+insertInto();

@@ -30,3 +30,17 @@ export function wildcardCharacters() {
     });
   });
 }
+
+export function escapingQueryValues(address) {
+  connection.connect(function (error) {
+    if (error) throw error;
+    const sql = `SELECT * FROM customers WHERE address = ${mysql.escape(
+      address
+    )}`;
+
+    connection.query(sql, function (error, result) {
+      if (error) throw error;
+      console.log(result);
+    });
+  });
+}

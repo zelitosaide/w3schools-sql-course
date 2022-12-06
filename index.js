@@ -9,7 +9,7 @@ import {
   insertIntoGetId,
   insertIntoMany,
 } from "./nodejs-mysql/insert-into.js";
-import { orderBy } from "./nodejs-mysql/order-by.js";
+import { orderBy, orderByDesc } from "./nodejs-mysql/order-by.js";
 import {
   fieldsObject,
   selectFrom,
@@ -40,4 +40,5 @@ import {
 // escapingQueryValues("Mountain 21");
 // placeholder("Mountain 21");
 // multiplePlaceholders("Mountain 21", "Amy");
-orderBy();
+// orderBy();
+orderByDesc();

@@ -19,3 +19,14 @@ export function orderBy() {
     });
   });
 }
+
+export function orderByDesc() {
+  connection.connect(function (error) {
+    if (error) throw error;
+    const sql = `SELECT * FROM customers ORDER BY name DESC`;
+    connection.query(sql, function (error, result) {
+      if (error) throw error;
+      console.log(result);
+    });
+  });
+}

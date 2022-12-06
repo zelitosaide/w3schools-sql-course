@@ -9,7 +9,7 @@ import {
   insertIntoGetId,
   insertIntoMany,
 } from "./lessons/insert-into.js";
-import { selectFrom } from "./lessons/select-from.js";
+import { selectFrom, selectFromSomeColumns } from "./lessons/select-from.js";
 import { showDatabases } from "./lessons/show-databases.js";
 
 // showDatabases();
@@ -21,3 +21,4 @@ import { showDatabases } from "./lessons/show-databases.js";
 // insertIntoMany();
 // insertIntoGetId();
 // selectFrom();
+selectFromSomeColumns();

@@ -19,3 +19,14 @@ export function deleteRows() {
     });
   });
 }
+
+export function deleteManyRows() {
+  connection.connect(function (error) {
+    if (error) throw error;
+    const sql = `DELETE FROM customers WHERE id > 16`;
+    connection.query(sql, function (error, result) {
+      if (error) throw error;
+      console.log("Number of records deleted: " + result.affectedRows);
+    });
+  });
+}

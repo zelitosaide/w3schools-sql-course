@@ -56,4 +56,4 @@ import {
 // showTables();
 // dropTable();
 // dropTableIfExists();
-describeTable();
+// describeTable();

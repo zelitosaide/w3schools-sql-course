@@ -67,4 +67,4 @@ import {
 // updateManyColumns();
 // limit();
 // limitOffset();
-limitOffsetShorterSyntax();
+// limitOffsetShorterSyntax();

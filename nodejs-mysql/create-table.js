@@ -23,7 +23,8 @@ export function createCustomerTable() {
 export function createUserTable() {
   connection.connect(function (error) {
     if (error) throw error;
-    const sql = `CREATE TABLE users (id INT AUTO_INCREMENT PRIMARY KEY, name VARCHAR(255));`;
+    // const sql = `CREATE TABLE users (id INT AUTO_INCREMENT PRIMARY KEY, name VARCHAR(255));`;
+    const sql = `CREATE TABLE products (id INT AUTO_INCREMENT PRIMARY KEY, name VARCHAR(255));`;
     connection.query(sql, function (error, result) {
       if (error) throw error;
       console.log(result);

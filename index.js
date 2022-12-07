@@ -16,7 +16,7 @@ import {
   insertIntoGetId,
   insertIntoMany,
 } from "./nodejs-mysql/insert-into.js";
-import { join } from "./nodejs-mysql/join.js";
+import { join, leftJoin } from "./nodejs-mysql/join.js";
 import {
   limit,
   limitOffset,
@@ -70,3 +70,4 @@ import {
 // limitOffset();
 // limitOffsetShorterSyntax();
 // join();
+leftJoin();

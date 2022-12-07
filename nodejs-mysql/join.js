@@ -19,3 +19,5 @@ export function join() {
     });
   });
 }
+
+export function leftJoin() {}

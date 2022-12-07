@@ -19,3 +19,14 @@ export function update() {
     });
   });
 }
+
+export function updateManyColumns() {
+  connection.connect(function (error) {
+    if (error) throw error;
+    const sql = `UPDATE customers SET name = "John", address = "Highway 71" WHERE id = 1`;
+    connection.query(sql, function (error, result) {
+      if (error) throw error;
+      console.log(result.affectedRows + " record(s) updated");
+    });
+  });
+}

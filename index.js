@@ -24,6 +24,7 @@ import {
 } from "./nodejs-mysql/select-from.js";
 import { showDatabases } from "./nodejs-mysql/show-databases.js";
 import { showTables } from "./nodejs-mysql/show-tables.js";
+import { update, updateManyColumns } from "./nodejs-mysql/update.js";
 import {
   escapingQueryValues,
   multiplePlaceholders,
@@ -57,3 +58,5 @@ import {
 // dropTable();
 // dropTableIfExists();
 // describeTable();
+// update();
+updateManyColumns();

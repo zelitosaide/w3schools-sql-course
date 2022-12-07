@@ -9,7 +9,7 @@ const connection = mysql.createConnection({
   database: process.env.DATABASE,
 });
 
-function limit() {
+export function limit() {
   connection.connect(function (error) {
     if (error) throw error;
     const sql = `SELECT * FROM customers LIMIT 2`;

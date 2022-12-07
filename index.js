@@ -16,6 +16,7 @@ import {
   insertIntoGetId,
   insertIntoMany,
 } from "./nodejs-mysql/insert-into.js";
+import { limit } from "./nodejs-mysql/limit.js";
 import { orderBy, orderByDesc } from "./nodejs-mysql/order-by.js";
 import {
   fieldsObject,
@@ -59,4 +60,5 @@ import {
 // dropTableIfExists();
 // describeTable();
 // update();
-updateManyColumns();
+// updateManyColumns();
+limit();

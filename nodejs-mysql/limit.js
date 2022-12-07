@@ -30,3 +30,14 @@ export function limitOffset() {
     });
   });
 }
+
+export function limitOffsetShorterSyntax() {
+  connection.connect(function (error) {
+    if (error) throw error;
+    const sql = `SELECT * FROM customers LIMIT 1, 2`;
+    connection.query(sql, function (error, result) {
+      if (error) throw error;
+      console.log(result);
+    });
+  });
+}

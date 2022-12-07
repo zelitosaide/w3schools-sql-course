@@ -16,7 +16,11 @@ import {
   insertIntoGetId,
   insertIntoMany,
 } from "./nodejs-mysql/insert-into.js";
-import { limit, limitOffset } from "./nodejs-mysql/limit.js";
+import {
+  limit,
+  limitOffset,
+  limitOffsetShorterSyntax,
+} from "./nodejs-mysql/limit.js";
 import { orderBy, orderByDesc } from "./nodejs-mysql/order-by.js";
 import {
   fieldsObject,
@@ -62,4 +66,5 @@ import {
 // update();
 // updateManyColumns();
 // limit();
-limitOffset();
+// limitOffset();
+limitOffsetShorterSyntax();

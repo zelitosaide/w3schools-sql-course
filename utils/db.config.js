@@ -8,3 +8,18 @@ export const connection = mysql.createConnection({
   password: process.env.PASSWORD,
   database: process.env.DATABASE,
 });
+
+export function connect() {
+  return new Promise(function (resolve, reject) {
+    connection.connect(function (error) {
+      if (error) reject(error);
+      resolve(connection);
+    });
+  });
+}
+
+export function disconnect() {
+  connection.end(function (error) {
+    if (error) throw error;
+  });
+}

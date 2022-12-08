@@ -5,10 +5,12 @@ export async function select() {
     const connection = await connect();
     const sql = "SELECT * FROM customers";
     connection.query(sql, function (error, result) {
-      if (error) throw error;
-      console.log(result);
+      // code to be executed..
     });
   } catch (error) {
     console.log(error);
   }
 }
+
+// if (error) throw error;
+//       console.log(result);

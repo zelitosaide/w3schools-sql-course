@@ -1,7 +1,10 @@
-export function Hello() {
-  return (
-    <div style={{ padding: 10, color: "white" }}>
-      <p></p>
-    </div>
-  );
+import { connect } from "../../utils/db.config.js";
+
+export async function select() {
+  try {
+    const connection = await connect();
+    console.log("Connected!");
+  } catch (error) {
+    console.log(error.message);
+  }
 }

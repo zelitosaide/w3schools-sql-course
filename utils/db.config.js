@@ -3,7 +3,7 @@ import dotenv from "dotenv";
 
 dotenv.config();
 
-export const connection = mysql.createConnection({
+const connection = mysql.createConnection({
   user: process.env.USER,
   password: process.env.PASSWORD,
   database: process.env.DATABASE,
@@ -15,11 +15,5 @@ export function connect() {
       if (error) reject(error);
       resolve(connection);
     });
-  });
-}
-
-export function disconnect() {
-  connection.end(function (error) {
-    if (error) throw error;
   });
 }

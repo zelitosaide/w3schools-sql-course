@@ -17,10 +17,3 @@ export function connect() {
     });
   });
 }
-
-// To be revised
-export function disconnect() {
-  connection.end(function (error) {
-    if (error) throw error;
-  });
-}

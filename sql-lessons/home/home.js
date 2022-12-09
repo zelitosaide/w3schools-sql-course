@@ -1,6 +1,6 @@
 import { connect } from "../../utils/db.config.js";
 
-export async function select() {
+export async function home() {
   try {
     const connection = await connect();
     const sql = "SELECT name FROM customers";

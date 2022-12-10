@@ -12,3 +12,17 @@ export async function selectAllFields(table) {
     console.log(error);
   }
 }
+
+export async function selectSomeFields(props) {
+  try {
+    const { fields, table } = props;
+    const { connection } = await connect();
+    const sql = "SELECT ?? FROM ??";
+    connection.query(sql, [fields, table], function (error, result) {
+      if (error) throw error;
+      console.log(result);
+    });
+  } catch (error) {
+    console.log(error);
+  }
+}

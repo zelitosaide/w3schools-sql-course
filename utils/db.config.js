@@ -13,7 +13,7 @@ export function connect() {
   return new Promise(function (resolve, reject) {
     connection.connect(function (error) {
       if (error) reject(error);
-      resolve(connection);
+      resolve({ connection, mysql });
     });
   });
 }

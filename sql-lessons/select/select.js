@@ -22,6 +22,21 @@ export async function selectSomeFields(props) {
       if (error) throw error;
       console.log(result);
     });
+    return answer;
+  } catch (error) {
+    console.log(error);
+  }
+}
+
+export async function selectSomeFieldsHardCoded() {
+  try {
+    const { connection } = await connect();
+    const sql = "SELECT name, id FROM users";
+    connection.query(sql, function (error, result) {
+      if (error) throw error;
+      console.log(result);
+    });
+    return answer;
   } catch (error) {
     console.log(error);
   }

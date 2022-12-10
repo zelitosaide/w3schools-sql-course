@@ -22,7 +22,6 @@ export async function selectSomeFields(props) {
       if (error) throw error;
       console.log(result);
     });
-    return answer;
   } catch (error) {
     console.log(error);
   }

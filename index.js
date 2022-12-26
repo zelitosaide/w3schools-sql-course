@@ -6,6 +6,8 @@ import {
   selectSomeFields,
   selectSomeFieldsHardCoded,
 } from "./sql-lessons/select/select.js";
+import { selectDistinct } from "./sql-lessons/select-distinct/select-distinct.js";
 
 // selectSomeFields({ table: "users", fields: ["name", "id"] });
-selectSomeFieldsHardCoded();
+// selectSomeFieldsHardCoded();
+selectDistinct();

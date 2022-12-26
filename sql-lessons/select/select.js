@@ -35,7 +35,6 @@ export async function selectSomeFieldsHardCoded() {
       if (error) throw error;
       console.log(result);
     });
-    return answer;
   } catch (error) {
     console.log(error);
   }

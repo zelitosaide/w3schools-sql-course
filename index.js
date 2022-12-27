@@ -13,6 +13,7 @@ import {
   selectAllCountAndRenameColumn,
   selectDistinctAndCount,
   selectDistinctRenameAndCount,
+  countDistinctNotWorkInFirefox,
 } from "./sql-lessons/select-distinct/select-distinct.js";
 
 // selectSomeFields({ table: "users", fields: ["name", "id"] });
@@ -22,4 +23,5 @@ import {
 // selectAllAndCount();
 // selectAllCountAndRenameColumn();
 // selectDistinctAndCount();
-selectDistinctRenameAndCount();
+// selectDistinctRenameAndCount();
+countDistinctNotWorkInFirefox();

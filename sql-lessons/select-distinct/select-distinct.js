@@ -78,3 +78,18 @@ export async function selectDistinctRenameAndCount() {
     console.log(error);
   }
 }
+
+export async function countDistinctNotWorkInFirefox() {
+  try {
+    const { connection } = await connect();
+    // const sql = `SELECT COUNT(*) AS total FROM (SELECT DISTINCT address FROM customers)`; // Not working
+    const sql = `SELECT Count(*) AS total FROM (SELECT DISTINCT address FROM customers) customers`;
+    // const sql = `SELECT Count(*) AS total FROM (SELECT DISTINCT address FROM customers) AS customers`;
+    connection.query(sql, function (error, result) {
+      if (error) throw error;
+      console.log(result);
+    });
+  } catch (error) {
+    console.log(error);
+  }
+}

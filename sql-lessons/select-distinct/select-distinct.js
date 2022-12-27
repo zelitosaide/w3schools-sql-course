@@ -22,3 +22,5 @@ export async function selectDistinctManyColumns() {
     console.log(result);
   });
 }
+
+export async function selectAllAndCount() {}

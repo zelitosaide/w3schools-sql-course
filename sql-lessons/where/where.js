@@ -3,7 +3,7 @@ import { connect } from "../../utils/db.config.js";
 export async function where() {
   try {
     const { connection } = await connect();
-    const sql = 'SELECT * FROM customers WHERE address="Namicopo"';
+    const sql = "SELECT * FROM customers WHERE address='Namicopo'";
     connection.query(sql, function (error, result) {
       if (error) throw error;
       console.log(result);
@@ -11,4 +11,13 @@ export async function where() {
   } catch (error) {
     console.log(error);
   }
+}
+
+export async function getCustomerById(id) {
+  const { connection } = await connect();
+  const sql = "SELECT * FROM customers WHERE address=?";
+  connection.query(sql, id, function (error, result) {
+    if (error) throw error;
+    console.log(result);
+  });
 }

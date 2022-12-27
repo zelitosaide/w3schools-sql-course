@@ -21,3 +21,5 @@ export async function getCustomerById(id) {
     console.log(result);
   });
 }
+
+export async function selectHalfOfRecords() {}

@@ -27,4 +27,4 @@ import { getCustomerById, where } from "./sql-lessons/where/where.js";
 // selectDistinctRenameAndCount();
 // countDistinctNotWorkInFirefox();
 // where();
-getCustomerById(15);
+getCustomerById(2);

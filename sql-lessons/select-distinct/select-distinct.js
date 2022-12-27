@@ -15,12 +15,19 @@ export async function selectDistinct() {
 }
 
 export async function selectDistinctManyColumns() {
-  const { connection } = await connect();
-  const sql = "SELECT DISTINCT name, address FROM customers;";
-  connection.query(sql, function (error, result) {
-    if (error) throw error;
-    console.log(result);
-  });
+  try {
+    const { connection } = await connect();
+    const sql = "SELECT DISTINCT name, address FROM customers;";
+    connection.query(sql, function (error, result) {
+      if (error) throw error;
+      console.log(result);
+    });
+  } catch (error) {
+    console.log(error);
+  }
 }
 
-export async function selectAllAndCount() {}
+export async function selectAllAndCount() {
+  const { connection } = await connect();
+  const sql = "SELECT COUNT(address) FROM customers;";
+}

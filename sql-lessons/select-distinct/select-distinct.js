@@ -39,3 +39,16 @@ export async function selectAllAndCount() {
     console.log(error);
   }
 }
+
+export async function selectAllCountAndRenameColumn() {
+  try {
+    const { connection } = await connect();
+    const sql = "SELECT COUNT(address) AS total FROM customers;";
+    connection.query(sql, function (error, result) {
+      if (error) throw error;
+      console.log(result);
+    });
+  } catch (error) {
+    console.log(error);
+  }
+}

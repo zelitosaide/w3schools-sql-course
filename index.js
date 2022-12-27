@@ -10,10 +10,12 @@ import {
   selectDistinct,
   selectDistinctManyColumns,
   selectAllAndCount,
+  selectAllCountAndRenameColumn,
 } from "./sql-lessons/select-distinct/select-distinct.js";
 
 // selectSomeFields({ table: "users", fields: ["name", "id"] });
 // selectSomeFieldsHardCoded();
 // selectDistinct();
 // selectDistinctManyColumns();
-selectAllAndCount();
+// selectAllAndCount();
+selectAllCountAndRenameColumn();

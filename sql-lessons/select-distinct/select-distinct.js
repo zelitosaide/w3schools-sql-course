@@ -52,3 +52,12 @@ export async function selectAllCountAndRenameColumn() {
     console.log(error);
   }
 }
+
+export async function selectDistinctAndCount() {
+  const { connection } = await connect();
+  const sql = "SELECT COUNT(DISTINCT address) FROM customers;";
+  connection.query(sql, function (error, result) {
+    if (error) throw error;
+    console.log(result);
+  });
+}

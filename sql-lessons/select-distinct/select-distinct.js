@@ -71,6 +71,6 @@ export async function selectDistinctRenameAndCount() {
   const sql = "SELECT COUNT(DISTINCT address) AS total FROM customers;";
   connection.query(sql, function (error, result) {
     if (error) throw error;
-    console.log(error);
+    console.log(result);
   });
 }

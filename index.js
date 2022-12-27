@@ -12,6 +12,7 @@ import {
   selectAllAndCount,
   selectAllCountAndRenameColumn,
   selectDistinctAndCount,
+  selectDistinctRenameAndCount,
 } from "./sql-lessons/select-distinct/select-distinct.js";
 
 // selectSomeFields({ table: "users", fields: ["name", "id"] });
@@ -20,4 +21,5 @@ import {
 // selectDistinctManyColumns();
 // selectAllAndCount();
 // selectAllCountAndRenameColumn();
-selectDistinctAndCount();
+// selectDistinctAndCount();
+selectDistinctRenameAndCount();

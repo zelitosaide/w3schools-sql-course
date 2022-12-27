@@ -9,9 +9,11 @@ import {
 import {
   selectDistinct,
   selectDistinctManyColumns,
+  selectAllAndCount,
 } from "./sql-lessons/select-distinct/select-distinct.js";
 
 // selectSomeFields({ table: "users", fields: ["name", "id"] });
 // selectSomeFieldsHardCoded();
 // selectDistinct();
-selectDistinctManyColumns();
+// selectDistinctManyColumns();
+selectAllAndCount();

@@ -15,7 +15,7 @@ export async function where() {
 
 export async function getCustomerById(id) {
   const { connection } = await connect();
-  const sql = "SELECT * FROM customers WHERE address=?";
+  const sql = "SELECT * FROM customers WHERE id=?";
   connection.query(sql, id, function (error, result) {
     if (error) throw error;
     console.log(result);

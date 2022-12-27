@@ -15,7 +15,7 @@ import {
   selectDistinctRenameAndCount,
   countDistinctNotWorkInFirefox,
 } from "./sql-lessons/select-distinct/select-distinct.js";
-import { where } from "./sql-lessons/where/where.js";
+import { getCustomerById, where } from "./sql-lessons/where/where.js";
 
 // selectSomeFields({ table: "users", fields: ["name", "id"] });
 // selectSomeFieldsHardCoded();
@@ -26,4 +26,5 @@ import { where } from "./sql-lessons/where/where.js";
 // selectDistinctAndCount();
 // selectDistinctRenameAndCount();
 // countDistinctNotWorkInFirefox();
-where();
+// where();
+getCustomerById(15);

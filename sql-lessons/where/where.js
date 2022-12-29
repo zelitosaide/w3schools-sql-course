@@ -1,4 +1,4 @@
-import { connect } from "../../utils/db.config.js";
+import { connect, query } from "../../utils/db.config.js";
 
 export async function where() {
   try {
@@ -22,4 +22,12 @@ export async function getCustomerById(id) {
   });
 }
 
-export async function selectHalfOfRecords() {}
+export async function selectHalfOfRecords() {
+  const { connection } = await connect();
+  const [total] = await query("SELECT COUNT(*) FROM customers", connection);
+  const records = await query(
+    "SELECT COUNT(*) FROM customers WHERE id > " + total["COUNT(*)"] / 2,
+    connection
+  );
+  console.log(records, total["COUNT(*)"]);
+}

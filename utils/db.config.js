@@ -20,9 +20,9 @@ export function connect() {
   });
 }
 
-export function query(sql) {
-  return new Promise(async function (resolve, reject) {
-    const { connection } = await connect();
+export function query(sql, connection) {
+  return new Promise(function (resolve, reject) {
+    // const { connection } = await connect();
     connection.query(sql, function (error, result) {
       if (error) reject(error);
       else resolve(result);

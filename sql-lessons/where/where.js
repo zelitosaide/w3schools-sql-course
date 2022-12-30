@@ -57,3 +57,8 @@ export async function getCustomersIdGreaterThanOrEqual(id) {
 export async function getCustomersIdLessThanOrEqual(id) {
   return await query("SELECT * FROM customers WHERE id <= " + id);
 }
+
+export async function getCustomersIdNotEqual(id) {
+  return await query("SELECT * FROM customers WHERE id <> " + id);
+  // return await query("SELECT * FROM customers WHERE id != " + id);
+}

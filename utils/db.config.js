@@ -5,7 +5,7 @@ import { promisify } from "./promisify.js";
 
 dotenv.config();
 
-const connection = mysql.createConnection({
+export const connection = mysql.createConnection({
   user: process.env.USER,
   password: process.env.PASSWORD,
   database: process.env.DATABASE,
@@ -20,12 +20,15 @@ export function connect() {
   });
 }
 
-export function query(sql, connection) {
+export function query(sql) {
   return new Promise(function (resolve, reject) {
-    // const { connection } = await connect();
-    connection.query(sql, function (error, result) {
+    connection.connect(function (error) {
       if (error) reject(error);
-      else resolve(result);
+      connection.query(sql, function (error, result) {
+        if (error) reject(error);
+        resolve(result);
+        connection.end();
+      });
     });
   });
 }

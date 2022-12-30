@@ -72,3 +72,9 @@ export async function getCustomersIdBetween(min, max) {
 export async function getCustomersAddressLike(pattern) {
   return await query(`SELECT * FROM customers WHERE address LIKE "${pattern}"`);
 }
+
+export async function getCustomersNameIn(name1, name2) {
+  return await query(
+    `SELECT * FROM customers WHERE name IN ("${name1}", "${name2}")`
+  );
+}

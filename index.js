@@ -22,7 +22,7 @@ import {
   getCustomerByName,
   getSecondHalfOfRecords,
   getFistHalfOfRecords,
-  getCustomerIdGreaterThanOrEqual,
+  getCustomersIdGreaterThanOrEqual,
 } from "./sql-lessons/where/where.js";
 
 // selectSomeFields({ table: "users", fields: ["name", "id"] });
@@ -54,4 +54,4 @@ import {
 // console.log(firstHalfOfCustomers);
 // console.log(secondHalfOfCustomers);
 
-console.log(await getCustomerIdGreaterThanOrEqual(4));
+console.log(await getCustomersIdGreaterThanOrEqual(4));

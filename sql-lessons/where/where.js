@@ -50,7 +50,7 @@ export async function getCustomerById(id) {
   return customer;
 }
 
-export async function getCustomerIdGreaterThanOrEqual(number) {
+export async function getCustomersIdGreaterThanOrEqual(number) {
   const customers = await query(
     "SELECT * FROM customers WHERE id >= " + number
   );

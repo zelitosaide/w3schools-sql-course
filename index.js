@@ -41,5 +41,8 @@ import {
 //   console.log(item.name);
 // });
 
-const customer = await getCustomerByName("Zelito");
-console.log(customer.address);
+// const customer = await getCustomerByName("Zelito");
+// console.log(customer.address);
+
+const customer = await getCustomerById(2);
+console.log(customer);

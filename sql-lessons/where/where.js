@@ -13,14 +13,14 @@ export async function where() {
   }
 }
 
-export async function getCustomerById(id) {
-  const { connection } = await connect();
-  const sql = "SELECT * FROM customers WHERE id=?";
-  connection.query(sql, id, function (error, result) {
-    if (error) throw error;
-    console.log(result);
-  });
-}
+// export async function getCustomerById(id) {
+//   const { connection } = await connect();
+//   const sql = "SELECT * FROM customers WHERE id=?";
+//   connection.query(sql, id, function (error, result) {
+//     if (error) throw error;
+//     console.log(result);
+//   });
+// }
 
 // divisor de aguas
 export async function getTotalRecords() {
@@ -37,5 +37,11 @@ export async function getCustomerByName(name) {
   const [customer] = await query(
     `SELECT * FROM customers WHERE name = "${name}"`
   );
+  return customer;
+}
+
+export async function getCustomerById(id) {
+  // const [customer] = await query(`SELECT * FROM customers WHERE id = "${id}"`);
+  const [customer] = await query("SELECT * FROM customers WHERE id = " + id);
   return customer;
 }

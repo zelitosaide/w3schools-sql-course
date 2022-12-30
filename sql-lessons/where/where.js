@@ -39,6 +39,5 @@ export async function getTotalRecords() {
 
 export async function selectHalfOfRecords() {
   const total = await getTotalRecords();
-  const result = await query("SELECT * FROM customers WHERE id > " + total / 2);
-  console.log(result);
+  return await query("SELECT * FROM customers WHERE id > " + total / 2);
 }

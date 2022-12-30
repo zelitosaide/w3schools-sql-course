@@ -18,9 +18,10 @@ import {
 import {
   getCustomerById,
   where,
-  selectHalfOfRecords,
   getTotalRecords,
   getCustomerByName,
+  getSecondHalfOfRecords,
+  getFistHalfOfRecords,
 } from "./sql-lessons/where/where.js";
 
 // selectSomeFields({ table: "users", fields: ["name", "id"] });
@@ -36,7 +37,7 @@ import {
 // getCustomerById(2);
 // console.log(await getTotalRecords());
 
-// const customers = await selectHalfOfRecords();
+// const customers = await getSecondHalfOfRecords();
 // customers.forEach(function (item) {
 //   console.log(item.name);
 // });
@@ -44,5 +45,10 @@ import {
 // const customer = await getCustomerByName("Zelito");
 // console.log(customer.address);
 
-const customer = await getCustomerById(2);
-console.log(customer);
+// const customer = await getCustomerById(2);
+// console.log(customer);
+
+// const firstHalfOfCustomers = await getFistHalfOfRecords();
+// const secondHalfOfCustomers = await getSecondHalfOfRecords();
+// console.log(firstHalfOfCustomers);
+// console.log(secondHalfOfCustomers);

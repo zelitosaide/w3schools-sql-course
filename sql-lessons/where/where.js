@@ -28,7 +28,12 @@ export async function getTotalRecords() {
   return result[0].total;
 }
 
-export async function selectHalfOfRecords() {
+export async function getFistHalfOfRecords() {
+  const total = await getTotalRecords();
+  return await query("SELECT * FROM customers WHERE id < " + total / 2);
+}
+
+export async function getSecondHalfOfRecords() {
   const total = await getTotalRecords();
   return await query("SELECT * FROM customers WHERE id > " + total / 2);
 }

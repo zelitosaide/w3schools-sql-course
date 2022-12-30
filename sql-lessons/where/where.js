@@ -22,6 +22,7 @@ export async function getCustomerById(id) {
   });
 }
 
+// divisor de aguas
 export async function getTotalRecords() {
   const result = await query("SELECT COUNT(*) AS total FROM customers");
   return result[0].total;
@@ -30,4 +31,11 @@ export async function getTotalRecords() {
 export async function selectHalfOfRecords() {
   const total = await getTotalRecords();
   return await query("SELECT * FROM customers WHERE id > " + total / 2);
+}
+
+export async function getCustomerByName(name) {
+  const [customer] = await query(
+    `SELECT * FROM customers WHERE name = "${name}"`
+  );
+  return customer;
 }

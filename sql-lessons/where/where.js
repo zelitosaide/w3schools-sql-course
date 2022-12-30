@@ -62,3 +62,9 @@ export async function getCustomersIdNotEqual(id) {
   return await query("SELECT * FROM customers WHERE id <> " + id);
   // return await query("SELECT * FROM customers WHERE id != " + id);
 }
+
+export async function getCustomersIdBetween(min, max) {
+  return await query(
+    `SELECT * FROM customers WHERE id BETWEEN ${min} AND ${max}`
+  );
+}

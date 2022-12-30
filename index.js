@@ -41,4 +41,5 @@ import {
 //   console.log(item.name);
 // });
 
-console.log(await getCustomerByName("Zelito"));
+const customer = await getCustomerByName("Zelito");
+console.log(customer.address);

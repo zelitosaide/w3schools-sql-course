@@ -34,4 +34,7 @@ import {
 // where();
 // getCustomerById(2);
 // console.log(await getTotalRecords());
-selectHalfOfRecords();
+const customers = await selectHalfOfRecords();
+customers.forEach(function (item) {
+  console.log(item.name);
+});

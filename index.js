@@ -34,4 +34,4 @@ import {
 // where();
 // getCustomerById(2);
 // selectHalfOfRecords();
-getTotalRecords();
+console.log(await getTotalRecords());

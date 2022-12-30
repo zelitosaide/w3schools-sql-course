@@ -22,13 +22,9 @@ export function connect() {
 
 export function query(sql) {
   return new Promise(function (resolve, reject) {
-    connection.connect(function (error) {
+    connection.query(sql, function (error, result) {
       if (error) reject(error);
-      connection.query(sql, function (error, result) {
-        if (error) reject(error);
-        resolve(result);
-      });
-      connection.end();
+      resolve(result);
     });
   });
 }

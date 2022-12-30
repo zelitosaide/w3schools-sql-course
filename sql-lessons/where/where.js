@@ -33,6 +33,12 @@ export async function getCustomerById(id) {
 // }
 
 export async function getTotalRecords() {
+  // await connect();
   const [result] = await query("SELECT COUNT(*) AS total FROM customers");
+  await query("SELECT COUNT(*) AS total FROM customers");
+  await query("SELECT COUNT(*) AS total FROM customers");
+  await query("SELECT COUNT(*) AS total FROM customers");
+  await query("SELECT COUNT(*) AS total FROM customers");
+  await query("SELECT COUNT(*) AS total FROM customers");
   return result.total;
 }

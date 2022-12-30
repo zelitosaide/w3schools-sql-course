@@ -68,3 +68,7 @@ export async function getCustomersIdBetween(min, max) {
     `SELECT * FROM customers WHERE id BETWEEN ${min} AND ${max}`
   );
 }
+
+export async function getCustomersAddressLike(pattern) {
+  return await query(`SELECT * FROM customers WHERE address LIKE "${pattern}"`);
+}

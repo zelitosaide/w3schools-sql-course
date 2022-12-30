@@ -26,6 +26,7 @@ import {
   getCustomersIdLessThanOrEqual,
   getCustomersIdNotEqual,
   getCustomersIdBetween,
+  getCustomersAddressLike,
 } from "./sql-lessons/where/where.js";
 
 // selectSomeFields({ table: "users", fields: ["name", "id"] });
@@ -60,4 +61,5 @@ import {
 // console.log(await getCustomersIdGreaterThanOrEqual(4));
 // console.log(await getCustomersIdLessThanOrEqual(5));
 // console.log(await getCustomersIdNotEqual(1));
-console.log(await getCustomersIdBetween(2, 4));
+// console.log(await getCustomersIdBetween(2, 4));
+console.log(await getCustomersAddressLike("s%"));

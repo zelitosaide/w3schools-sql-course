@@ -46,7 +46,13 @@ export async function getCustomerByName(name) {
 }
 
 export async function getCustomerById(id) {
-  // const [customer] = await query(`SELECT * FROM customers WHERE id = "${id}"`);
   const [customer] = await query("SELECT * FROM customers WHERE id = " + id);
+  return customer;
+}
+
+export async function getCustomerIdGreaterThanOrEqual(number) {
+  const [customer] = await query(
+    "SELECT * FROM customers WHERE id >= " + number
+  );
   return customer;
 }

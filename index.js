@@ -18,7 +18,8 @@ import {
 import {
   getCustomerById,
   where,
-  selectHalfOfRecords,
+  // selectHalfOfRecords,
+  getTotalRecords,
 } from "./sql-lessons/where/where.js";
 
 // selectSomeFields({ table: "users", fields: ["name", "id"] });
@@ -32,4 +33,5 @@ import {
 // countDistinctNotWorkInFirefox();
 // where();
 // getCustomerById(2);
-selectHalfOfRecords();
+// selectHalfOfRecords();
+getTotalRecords();

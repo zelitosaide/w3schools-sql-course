@@ -27,8 +27,8 @@ export function query(sql) {
       connection.query(sql, function (error, result) {
         if (error) reject(error);
         resolve(result);
-        connection.end();
       });
+      connection.end();
     });
   });
 }

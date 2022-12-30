@@ -22,12 +22,17 @@ export async function getCustomerById(id) {
   });
 }
 
-export async function selectHalfOfRecords() {
-  const { connection } = await connect();
-  const [total] = await query("SELECT COUNT(*) FROM customers", connection);
-  const records = await query(
-    "SELECT COUNT(*) FROM customers WHERE id > " + total["COUNT(*)"] / 2,
-    connection
-  );
-  console.log(records, total["COUNT(*)"]);
+// export async function selectHalfOfRecords() {
+//   const { connection } = await connect();
+//   const [total] = await query("SELECT COUNT(*) FROM customers", connection);
+//   const records = await query(
+//     "SELECT COUNT(*) FROM customers WHERE id > " + total["COUNT(*)"] / 2,
+//     connection
+//   );
+//   console.log(records, total["COUNT(*)"]);
+// }
+
+export async function getTotalRecords() {
+  const [result] = await query("SELECT COUNT(*) AS total FROM customers");
+  return result.total;
 }

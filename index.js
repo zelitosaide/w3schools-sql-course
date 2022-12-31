@@ -31,6 +31,7 @@ import {
 } from "./sql-lessons/where/where.js";
 import {
   andOperator,
+  notOperator,
   orOperator,
 } from "./sql-lessons/and-or-not/and-or-not.js";
 
@@ -72,3 +73,4 @@ import {
 
 // console.log(await andOperator("abdala", "namicopo"));
 // console.log(await orOperator("abdala", "namicopo"));
+console.log(await notOperator(1));

@@ -26,3 +26,14 @@ export async function orOperator(name, address) {
     `SELECT * FROM customers WHERE name = "${name}" OR address = "${address}"`
   );
 }
+
+/**
+ * NOT Syntax
+ *
+ * SELECT column1, column2, ...
+ * FROM table_name
+ * WHERE NOT condition;
+ */
+export async function notOperator(id) {
+  return await query("SELECT * FROM customers WHERE NOT id = " + id);
+}

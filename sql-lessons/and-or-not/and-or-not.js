@@ -43,3 +43,9 @@ export async function combiningAndOr(name, address, id) {
     `SELECT * FROM customers WHERE name = "${name}" AND (address = "${address}" OR id > ${id})`
   );
 }
+
+export async function combiningAndNot(name, address) {
+  return await query(
+    `SELECT * FROM customers WHERE NOT name = "${name}" AND NOT address = "${address}"`
+  );
+}

@@ -13,3 +13,11 @@ export async function andOperator(name, address) {
     `SELECT * FROM customers WHERE name = "${name}" AND address = "${address}"`
   );
 }
+
+/**
+ * OR Syntax
+ *
+ * SELECT column1, column2, ...
+ * FROM table_name
+ * WHERE condition1 OR condition2 OR condition3 ...;
+ */

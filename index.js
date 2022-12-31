@@ -64,4 +64,4 @@ import {
 // console.log(await getCustomersIdNotEqual(1));
 // console.log(await getCustomersIdBetween(2, 4));
 // console.log(await getCustomersAddressLike("s%"));
-console.log(await getCustomersNameIn("zelito", "abdala"));
+// console.log(await getCustomersNameIn("zelito", "abdala"));

@@ -37,3 +37,9 @@ export async function orOperator(name, address) {
 export async function notOperator(id) {
   return await query("SELECT * FROM customers WHERE NOT id = " + id);
 }
+
+export async function combiningAndOr(name, address, id) {
+  return await query(
+    `SELECT * FROM customers WHERE name = "${name}" AND (address = "${address}" OR id > ${id})`
+  );
+}

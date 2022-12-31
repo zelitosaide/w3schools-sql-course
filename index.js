@@ -29,7 +29,10 @@ import {
   getCustomersAddressLike,
   getCustomersNameIn,
 } from "./sql-lessons/where/where.js";
-import { andOperator } from "./sql-lessons/and-or-not/and-or-not.js";
+import {
+  andOperator,
+  orOperator,
+} from "./sql-lessons/and-or-not/and-or-not.js";
 
 // selectSomeFields({ table: "users", fields: ["name", "id"] });
 // selectSomeFieldsHardCoded();
@@ -68,3 +71,4 @@ import { andOperator } from "./sql-lessons/and-or-not/and-or-not.js";
 // console.log(await getCustomersNameIn("zelito", "abdala"));
 
 // console.log(await andOperator("abdala", "namicopo"));
+// console.log(await orOperator("abdala", "namicopo"));

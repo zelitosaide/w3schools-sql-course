@@ -21,3 +21,8 @@ export async function andOperator(name, address) {
  * FROM table_name
  * WHERE condition1 OR condition2 OR condition3 ...;
  */
+export async function orOperator(name, address) {
+  return await query(
+    `SELECT * FROM customers WHERE name = "${name}" OR address = "${address}"`
+  );
+}

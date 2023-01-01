@@ -19,3 +19,15 @@ export async function orderByDesc(term) {
 export async function orderByAsc(term) {
   return await query("SELECT * FROM customers ORDER BY " + term + " ASC");
 }
+
+/**
+ * The following SQL statement selects all customers from the "customers" table,
+ * sorted by the "address" and the "name" column. This means that it
+ * orders by address, but if some rows have the same address, it orders them by name:
+ */
+export async function orderBySeveralColumns() {
+  // return await query("SELECT * FROM customers ORDER BY address, name");
+  return await query(
+    "SELECT address, name FROM customers ORDER BY address, name"
+  );
+}

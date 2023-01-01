@@ -102,5 +102,5 @@ import {
 // const customer = await postCustomer("Irene", "Carrupeia");
 // console.log(customer.affectedRows);
 
-const customer = await insertDataOnlyInSpecifiedColumns("Resta");
-console.log(customer.affectedRows);
+// const customer = await insertDataOnlyInSpecifiedColumns("Resta");
+// console.log(customer.affectedRows);

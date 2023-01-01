@@ -11,3 +11,7 @@ import { query } from "../../utils/db.config.js";
 export async function orderBy(term) {
   return await query("SELECT * FROM customers ORDER BY " + term);
 }
+
+export async function orderByDesc(term) {
+  return await query("SELECT * FROM customers ORDER BY " + term + " DESC");
+}

@@ -43,6 +43,7 @@ import {
   orderBySeveralColumns,
   orderBySeveralColumns2,
 } from "./sql-lessons/order-by/order-by.js";
+import { postCustomer } from "./sql-lessons/insert-into/insert-into.js";
 
 // selectSomeFields({ table: "users", fields: ["name", "id"] });
 // selectSomeFieldsHardCoded();
@@ -91,3 +92,6 @@ import {
 // console.log(await orderByAsc("id"));
 // console.log(await orderBySeveralColumns());
 // console.log(await orderBySeveralColumns2());
+
+// const customer = await postCustomer("Leonardo", "Carrupeia");
+// console.log(customer.affectedRows);

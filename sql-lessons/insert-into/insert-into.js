@@ -19,6 +19,9 @@ import { query } from "../../utils/db.config.js";
 
 export async function postCustomer(name, address) {
   return await query(
-    `INSERT INTO customers (name, address) VALUES ("${name}", "${address}")`
+    `INSERT INTO customers VALUES ("${name}", "${address}", null)`
   );
+  // return await query(
+  //   `INSERT INTO customers (name, address) VALUES ("${name}", "${address}")`
+  // );
 }

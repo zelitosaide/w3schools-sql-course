@@ -15,3 +15,7 @@ export async function orderBy(term) {
 export async function orderByDesc(term) {
   return await query("SELECT * FROM customers ORDER BY " + term + " DESC");
 }
+
+export async function orderByAsc(term) {
+  return await query("SELECT * FROM customers ORDER BY " + term + " ASC");
+}

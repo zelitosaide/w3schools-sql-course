@@ -34,6 +34,6 @@ export async function orderBySeveralColumns() {
 
 export async function orderBySeveralColumns2() {
   return await query(
-    "SELECT address, name FROM customers ORDER BY address, name DESC"
+    "SELECT address, name FROM customers ORDER BY address ASC, name DESC"
   );
 }

@@ -41,6 +41,7 @@ import {
   orderByAsc,
   orderByDesc,
   orderBySeveralColumns,
+  orderBySeveralColumns2,
 } from "./sql-lessons/order-by/order-by.js";
 
 // selectSomeFields({ table: "users", fields: ["name", "id"] });
@@ -88,4 +89,5 @@ import {
 // console.log(await orderBy("address"));
 // console.log(await orderByDesc("name"));
 // console.log(await orderByAsc("id"));
-console.log(await orderBySeveralColumns());
+// console.log(await orderBySeveralColumns());
+console.log(await orderBySeveralColumns2());

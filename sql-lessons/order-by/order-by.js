@@ -31,3 +31,9 @@ export async function orderBySeveralColumns() {
     "SELECT address, name FROM customers ORDER BY address, name"
   );
 }
+
+export async function orderBySeveralColumns2() {
+  return await query(
+    "SELECT address, name FROM customers ORDER BY address, name DESC"
+  );
+}

@@ -96,5 +96,5 @@ import { postCustomer } from "./sql-lessons/insert-into/insert-into.js";
 // const customer = await postCustomer("Leonardo", "Carrupeia");
 // console.log(customer.affectedRows);
 
-const customer = await postCustomer("Irene", "Carrupeia");
-console.log(customer.affectedRows);
+// const customer = await postCustomer("Irene", "Carrupeia");
+// console.log(customer.affectedRows);

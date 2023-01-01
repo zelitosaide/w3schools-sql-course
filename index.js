@@ -36,6 +36,7 @@ import {
   notOperator,
   orOperator,
 } from "./sql-lessons/and-or-not/and-or-not.js";
+import { orderBy } from "./sql-lessons/order-by/order-by.js";
 
 // selectSomeFields({ table: "users", fields: ["name", "id"] });
 // selectSomeFieldsHardCoded();
@@ -77,4 +78,6 @@ import {
 // console.log(await orOperator("abdala", "namicopo"));
 // console.log(await notOperator(1));
 // console.log(await combiningAndOr("abdala", "namiicopo", 2));
-console.log(await combiningAndNot("zelito", "namicopo"));
+// console.log(await combiningAndNot("zelito", "namicopo"));
+
+// console.log(await orderBy("address"));

@@ -26,3 +26,7 @@ export async function postCustomer(name, address) {
     `INSERT INTO customers (name, address) VALUES ("${name}", "${address}")`
   );
 }
+
+export async function insertDataOnlyInSpecifiedColumns(address) {
+  return await query(`INSERT INTO customers (address) VALUES ("${address}")`);
+}

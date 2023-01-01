@@ -43,7 +43,10 @@ import {
   orderBySeveralColumns,
   orderBySeveralColumns2,
 } from "./sql-lessons/order-by/order-by.js";
-import { postCustomer } from "./sql-lessons/insert-into/insert-into.js";
+import {
+  insertDataOnlyInSpecifiedColumns,
+  postCustomer,
+} from "./sql-lessons/insert-into/insert-into.js";
 
 // selectSomeFields({ table: "users", fields: ["name", "id"] });
 // selectSomeFieldsHardCoded();
@@ -98,3 +101,6 @@ import { postCustomer } from "./sql-lessons/insert-into/insert-into.js";
 
 // const customer = await postCustomer("Irene", "Carrupeia");
 // console.log(customer.affectedRows);
+
+const customer = await insertDataOnlyInSpecifiedColumns("Resta");
+console.log(customer.affectedRows);

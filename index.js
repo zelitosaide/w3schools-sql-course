@@ -90,4 +90,4 @@ import {
 // console.log(await orderByDesc("name"));
 // console.log(await orderByAsc("id"));
 // console.log(await orderBySeveralColumns());
-console.log(await orderBySeveralColumns2());
+// console.log(await orderBySeveralColumns2());

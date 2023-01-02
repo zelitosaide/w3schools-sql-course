@@ -47,6 +47,7 @@ import {
   insertDataOnlyInSpecifiedColumns,
   postCustomer,
 } from "./sql-lessons/insert-into/insert-into.js";
+import { isNull } from "./sql-lessons/null-values/null-values.js";
 
 // selectSomeFields({ table: "users", fields: ["name", "id"] });
 // selectSomeFieldsHardCoded();
@@ -104,3 +105,7 @@ import {
 
 // const customer = await insertDataOnlyInSpecifiedColumns("Resta");
 // console.log(customer.affectedRows);
+
+// const customers = await isNull("name");
+const customers = await isNull("address");
+console.log(customers);

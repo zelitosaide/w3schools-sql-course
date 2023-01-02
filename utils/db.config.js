@@ -1,8 +1,6 @@
 import mysql from "mysql";
 import dotenv from "dotenv";
 
-// import { promisify } from "./promisify.js";
-
 dotenv.config();
 
 export const connection = mysql.createConnection({

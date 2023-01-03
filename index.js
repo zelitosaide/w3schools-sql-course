@@ -50,6 +50,7 @@ import {
 import { isNotNull, isNull } from "./sql-lessons/null-values/null-values.js";
 import { updateAddress, updateName } from "./sql-lessons/update/update.js";
 import { deleteCustomers } from "./sql-lessons/delete/delete.js";
+import { selectTop } from "./sql-lessons/select-top/select-top.js";
 
 // selectSomeFields({ table: "users", fields: ["name", "id"] });
 // selectSomeFieldsHardCoded();
@@ -120,3 +121,4 @@ import { deleteCustomers } from "./sql-lessons/delete/delete.js";
 // console.log(await updateName("Unknown", "IS NULL"));
 
 // console.log(await deleteCustomers(24));
+console.log(await selectTop(2));

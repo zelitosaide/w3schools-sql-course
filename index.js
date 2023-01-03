@@ -116,4 +116,4 @@ import { updateAddress, updateName } from "./sql-lessons/update/update.js";
 // console.log(customers);
 
 // console.log(await updateAddress("Namicopo", "joao saide"));
-console.log(await updateName("Unknown", "IS NULL"));
+// console.log(await updateName("Unknown", "IS NULL"));

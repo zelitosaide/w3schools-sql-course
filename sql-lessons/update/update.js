@@ -12,3 +12,9 @@ export async function updateAddress(value, condition) {
     `UPDATE customers SET address = "${value}" WHERE address = "${condition}"`
   );
 }
+
+export async function updateName(value, condition) {
+  return await query(
+    `UPDATE customers SET name = "${value}" WHERE name ${condition}`
+  );
+}

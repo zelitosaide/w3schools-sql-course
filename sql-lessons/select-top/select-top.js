@@ -47,3 +47,6 @@ import { query } from "../../utils/db.config.js";
  * FROM (SELECT column_name(s) FROM table_name ORDER BY column_name(s))
  * WHERE ROWNUM <= number;
  */
+export async function selectTop(limit) {
+  return await query("SELECT * FROM customers LIMIT " + limit);
+}

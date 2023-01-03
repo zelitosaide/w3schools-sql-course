@@ -119,4 +119,4 @@ import { deleteCustomers } from "./sql-lessons/delete/delete.js";
 // console.log(await updateAddress("Namicopo", "joao saide"));
 // console.log(await updateName("Unknown", "IS NULL"));
 
-console.log(await deleteCustomers(24));
+// console.log(await deleteCustomers(24));

@@ -48,6 +48,7 @@ import {
   postCustomer,
 } from "./sql-lessons/insert-into/insert-into.js";
 import { isNotNull, isNull } from "./sql-lessons/null-values/null-values.js";
+import { updateAddress } from "./sql-lessons/update/update.js";
 
 // selectSomeFields({ table: "users", fields: ["name", "id"] });
 // selectSomeFieldsHardCoded();
@@ -110,6 +111,8 @@ import { isNotNull, isNull } from "./sql-lessons/null-values/null-values.js";
 // const customers = await isNull("address");
 // console.log(customers);
 
-const customers = await isNotNull("name");
-// const customers = await isNotNull("address");
-console.log(customers);
+// const customers = await isNotNull("name");
+// // const customers = await isNotNull("address");
+// console.log(customers);
+
+console.log(await updateAddress("Namicopo", "joao saide"));

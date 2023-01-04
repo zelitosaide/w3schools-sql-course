@@ -1,9 +1,25 @@
 import { query } from "../../utils/db.config.js";
 
+/**
+ * MIN() Syntax
+ *
+ * SELECT MIN(column_name)
+ * FROM table_name
+ * WHERE condition;
+ */
+
 export async function minId() {
   const [result] = await query("SELECT MIN(id) AS minId FROM customers");
   return result.minId;
 }
+
+/**
+ * MAX() Syntax
+ *
+ * SELECT MAX(column_name)
+ * FROM table_name
+ * WHERE condition;
+ */
 
 export async function maxId() {
   const [result] = await query("SELECT MAX(id) AS maxId FROM customers");

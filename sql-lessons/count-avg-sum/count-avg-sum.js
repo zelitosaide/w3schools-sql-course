@@ -8,6 +8,8 @@ import { query } from "../../utils/db.config.js";
  * SELECT COUNT(column_name)
  * FROM table_name
  * WHERE condition;
+ *
+ * Note: NULL values are not counted.
  */
 export async function countIds() {
   const [result] = await query("SELECT COUNT(id) FROM customers");
@@ -22,6 +24,8 @@ export async function countIds() {
  * SELECT AVG(column_name)
  * FROM table_name
  * WHERE condition;
+ *
+ * Note: NULL values are ignored.
  */
 export async function idsAverage() {
   const [result] = await query("SELECT AVG(id) FROM customers");

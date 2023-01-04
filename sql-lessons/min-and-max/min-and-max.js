@@ -9,3 +9,9 @@ export async function maxId() {
   const [result] = await query("SELECT MAX(id) AS maxId FROM customers");
   return result.maxId;
 }
+
+export async function getCustomerWithMaxId() {
+  const id = await maxId();
+  const [customer] = await query("SELECT * FROM customers WHERE id = " + id);
+  return customer;
+}

@@ -51,7 +51,7 @@ import { isNotNull, isNull } from "./sql-lessons/null-values/null-values.js";
 import { updateAddress, updateName } from "./sql-lessons/update/update.js";
 import { deleteCustomers } from "./sql-lessons/delete/delete.js";
 import { selectTop } from "./sql-lessons/select-top/select-top.js";
-import { minId } from "./sql-lessons/min-and-max/min-and-max.js";
+import { maxId, minId } from "./sql-lessons/min-and-max/min-and-max.js";
 
 // selectSomeFields({ table: "users", fields: ["name", "id"] });
 // selectSomeFieldsHardCoded();
@@ -124,4 +124,6 @@ import { minId } from "./sql-lessons/min-and-max/min-and-max.js";
 // console.log(await deleteCustomers(24));
 // console.log(await selectTop(2));
 
-console.log(await minId());
+// console.log(await minId());
+
+console.log(await maxId());

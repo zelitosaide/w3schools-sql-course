@@ -15,3 +15,10 @@ export async function getCustomerWithMaxId() {
   const [customer] = await query("SELECT * FROM customers WHERE id = " + id);
   return customer;
 }
+
+export async function getCustomerWithMinId() {
+  const [customer] = await query(
+    "SELECT * FROM customers WHERE id = (SELECT MIN(id) FROM customers)"
+  );
+  return customer;
+}

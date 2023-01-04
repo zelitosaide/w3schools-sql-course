@@ -57,6 +57,7 @@ import {
   maxId,
   minId,
 } from "./sql-lessons/min-and-max/min-and-max.js";
+import { countIds } from "./sql-lessons/count-avg-sum/count-avg-sum.js";
 
 // selectSomeFields({ table: "users", fields: ["name", "id"] });
 // selectSomeFieldsHardCoded();
@@ -134,4 +135,6 @@ import {
 // console.log(await maxId());
 
 // console.log(await getCustomerWithMaxId());
-console.log(await getCustomerWithMinId());
+// console.log(await getCustomerWithMinId());
+
+console.log(await countIds());

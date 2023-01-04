@@ -10,5 +10,17 @@ import { query } from "../../utils/db.config.js";
  * WHERE condition;
  */
 export async function countIds() {
-  return await query("SELECT COUNT(id) FROM customers");
+  const [result] = await query("SELECT COUNT(id) FROM customers");
+  return result["COUNT(id)"];
 }
+
+/**
+ * The AVG() function returns the average value of a numeric column.
+ *
+ * AVG() Syntax
+ *
+ * SELECT AVG(column_name)
+ * FROM table_name
+ * WHERE condition;
+ */
+export async function idsAverage() {}

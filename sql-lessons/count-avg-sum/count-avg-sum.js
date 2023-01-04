@@ -23,4 +23,6 @@ export async function countIds() {
  * FROM table_name
  * WHERE condition;
  */
-export async function idsAverage() {}
+export async function idsAverage() {
+  return await query("SELECT AVG(id) FROM customers");
+}

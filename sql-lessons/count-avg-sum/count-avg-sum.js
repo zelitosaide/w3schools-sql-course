@@ -24,5 +24,6 @@ export async function countIds() {
  * WHERE condition;
  */
 export async function idsAverage() {
-  return await query("SELECT AVG(id) FROM customers");
+  const [result] = await query("SELECT AVG(id) FROM customers");
+  return result["AVG(id)"];
 }

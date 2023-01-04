@@ -60,6 +60,7 @@ import {
 import {
   countIds,
   idsAverage,
+  sumIds,
 } from "./sql-lessons/count-avg-sum/count-avg-sum.js";
 
 // selectSomeFields({ table: "users", fields: ["name", "id"] });
@@ -141,4 +142,6 @@ import {
 // console.log(await getCustomerWithMinId());
 
 // console.log(await countIds());
-console.log(await idsAverage());
+// console.log(await idsAverage());
+
+console.log(await sumIds());

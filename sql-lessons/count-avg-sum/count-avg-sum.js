@@ -31,3 +31,17 @@ export async function idsAverage() {
   const [result] = await query("SELECT AVG(id) FROM customers");
   return result["AVG(id)"];
 }
+
+/**
+ * The SUM() function returns the total sum of a numeric column.
+ *
+ * SUM() Syntax
+ *
+ * SELECT SUM(column_name)
+ * FROM table_name
+ * WHERE condition;
+ */
+export async function sumIds() {
+  const [result] = await query("SELECT SUM(id) FROM customers");
+  return result["SUM(id)"];
+}

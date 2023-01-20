@@ -18,3 +18,10 @@ export async function customerNameThatEndsWith(text) {
   );
   return customers;
 }
+
+export async function customerNameThatHaveAStringInAnyPosition(text) {
+  const customers = await query(
+    `SELECT * FROM customers WHERE name LIKE "%${text}%"`
+  );
+  return customers;
+}

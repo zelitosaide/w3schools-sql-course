@@ -64,6 +64,7 @@ import {
 } from "./sql-lessons/count-avg-sum/count-avg-sum.js";
 import {
   customerNameThatEndsWith,
+  customerNameThatHaveAStringInAnyPosition,
   customerNameThatStartsWith,
 } from "./sql-lessons/like/like.js";
 
@@ -151,4 +152,5 @@ import {
 // console.log(await sumIds());
 
 // console.log(await customerNameThatStartsWith("lo"));
-console.log(await customerNameThatEndsWith("na"));
+// console.log(await customerNameThatEndsWith("na"));
+console.log(await customerNameThatHaveAStringInAnyPosition("na"));

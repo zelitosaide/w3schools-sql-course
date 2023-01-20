@@ -63,3 +63,11 @@ export async function customerNameThatStartWithAStringAndEndsWithAString(
   );
   return customers;
 }
+
+// customers with a name that does NOT start with "a":
+export async function customerNameThatDoesNotStartWithAString(text) {
+  const customers = await query(
+    `SELECT * FROM customers WHERE name NOT LIKE "${text}%"`
+  );
+  return customers;
+}

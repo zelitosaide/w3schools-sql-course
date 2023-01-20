@@ -147,4 +147,4 @@ import { customerNameThatStartsWith } from "./sql-lessons/like/like.js";
 
 // console.log(await sumIds());
 
-console.log(customerNameThatStartsWith("l"));
+console.log(await customerNameThatStartsWith("l"));

@@ -63,6 +63,7 @@ import {
   sumIds,
 } from "./sql-lessons/count-avg-sum/count-avg-sum.js";
 import {
+  customerNameThatDoesNotStartWithAString,
   customerNameThatEndsWith,
   customerNameThatHaveAStringInAnyPosition,
   customerNameThatHaveAStringInTheSecondPosition,
@@ -168,6 +169,8 @@ import {
 //   await customerNameThatStartWithACharAndAreAtLeast3CharactersInLength("m")
 // );
 
-console.log(
-  await customerNameThatStartWithAStringAndEndsWithAString("da", "iel")
-);
+// console.log(
+//   await customerNameThatStartWithAStringAndEndsWithAString("da", "iel")
+// );
+
+console.log(await customerNameThatDoesNotStartWithAString("z"));

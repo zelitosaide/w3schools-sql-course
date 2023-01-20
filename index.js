@@ -62,6 +62,7 @@ import {
   idsAverage,
   sumIds,
 } from "./sql-lessons/count-avg-sum/count-avg-sum.js";
+import { customerNameThatStartsWith } from "./sql-lessons/like/like.js";
 
 // selectSomeFields({ table: "users", fields: ["name", "id"] });
 // selectSomeFieldsHardCoded();
@@ -144,4 +145,6 @@ import {
 // console.log(await countIds());
 // console.log(await idsAverage());
 
-console.log(await sumIds());
+// console.log(await sumIds());
+
+console.log(customerNameThatStartsWith("l"));

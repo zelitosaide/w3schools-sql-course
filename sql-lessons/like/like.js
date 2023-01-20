@@ -32,3 +32,13 @@ export async function customerNameThatHaveAStringInTheSecondPosition(text) {
   );
   return customers;
 }
+
+// Finds any values that start with "a" and are at least 2 characters in length
+export async function customerNameThatStartWithACharAndAreAtLeast2CharactersInLength(
+  char
+) {
+  const customers = await query(
+    `SELECT * FROM customers WHERE name LIKE "${char}_%"`
+  );
+  return customers;
+}

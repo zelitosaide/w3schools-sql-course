@@ -42,3 +42,13 @@ export async function customerNameThatStartWithACharAndAreAtLeast2CharactersInLe
   );
   return customers;
 }
+
+// Finds any values that start with "a" and are at least 3 characters in length
+export async function customerNameThatStartWithACharAndAreAtLeast3CharactersInLength(
+  char
+) {
+  const customers = await query(
+    `SELECT * FROM customers WHERE name LIKE "${char}__%"`
+  );
+  return customers;
+}

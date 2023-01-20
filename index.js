@@ -65,6 +65,7 @@ import {
 import {
   customerNameThatEndsWith,
   customerNameThatHaveAStringInAnyPosition,
+  customerNameThatHaveAStringInTheSecondPosition,
   customerNameThatStartsWith,
 } from "./sql-lessons/like/like.js";
 
@@ -153,4 +154,5 @@ import {
 
 // console.log(await customerNameThatStartsWith("lo"));
 // console.log(await customerNameThatEndsWith("na"));
-console.log(await customerNameThatHaveAStringInAnyPosition("na"));
+// console.log(await customerNameThatHaveAStringInAnyPosition("na"));
+console.log(await customerNameThatHaveAStringInTheSecondPosition("DO"));

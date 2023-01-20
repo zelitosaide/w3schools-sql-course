@@ -25,3 +25,10 @@ export async function customerNameThatHaveAStringInAnyPosition(text) {
   );
   return customers;
 }
+
+export async function customerNameThatHaveAStringInTheSecondPosition(text) {
+  const customers = await query(
+    `SELECT * FROM customers WHERE name LIKE "_${text}%"`
+  );
+  return customers;
+}

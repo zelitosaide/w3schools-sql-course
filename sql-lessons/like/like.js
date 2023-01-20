@@ -52,3 +52,14 @@ export async function customerNameThatStartWithACharAndAreAtLeast3CharactersInLe
   );
   return customers;
 }
+
+// Finds any values that start with "a" and ends with "o"
+export async function customerNameThatStartWithAStringAndEndsWithAString(
+  text1,
+  text2
+) {
+  const customers = await query(
+    `SELECT * FROM customers WHERE name LIKE "${text1}%${text2}"`
+  );
+  return customers;
+}

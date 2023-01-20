@@ -69,6 +69,7 @@ import {
   customerNameThatStartsWith,
   customerNameThatStartWithACharAndAreAtLeast2CharactersInLength,
   customerNameThatStartWithACharAndAreAtLeast3CharactersInLength,
+  customerNameThatStartWithAStringAndEndsWithAString,
 } from "./sql-lessons/like/like.js";
 
 // selectSomeFields({ table: "users", fields: ["name", "id"] });
@@ -163,6 +164,10 @@ import {
 //   await customerNameThatStartWithACharAndAreAtLeast2CharactersInLength("a")
 // );
 
+// console.log(
+//   await customerNameThatStartWithACharAndAreAtLeast3CharactersInLength("m")
+// );
+
 console.log(
-  await customerNameThatStartWithACharAndAreAtLeast3CharactersInLength("m")
+  await customerNameThatStartWithAStringAndEndsWithAString("da", "iel")
 );

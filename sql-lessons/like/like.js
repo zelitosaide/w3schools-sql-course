@@ -6,8 +6,8 @@ import { query } from "../../utils/db.config.js";
  * WHERE columnN LIKE pattern;
  */
 export async function customerNameThatStartsWith(char) {
-  const [customer] = await query(
+  const customers = await query(
     `SELECT * FROM customers WHERE name LIKE "${char}%"`
   );
-  return customer;
+  return customers;
 }

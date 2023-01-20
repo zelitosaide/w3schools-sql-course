@@ -68,6 +68,7 @@ import {
   customerNameThatHaveAStringInTheSecondPosition,
   customerNameThatStartsWith,
   customerNameThatStartWithACharAndAreAtLeast2CharactersInLength,
+  customerNameThatStartWithACharAndAreAtLeast3CharactersInLength,
 } from "./sql-lessons/like/like.js";
 
 // selectSomeFields({ table: "users", fields: ["name", "id"] });
@@ -158,6 +159,10 @@ import {
 // console.log(await customerNameThatHaveAStringInAnyPosition("na"));
 // console.log(await customerNameThatHaveAStringInTheSecondPosition("DO"));
 
+// console.log(
+//   await customerNameThatStartWithACharAndAreAtLeast2CharactersInLength("a")
+// );
+
 console.log(
-  await customerNameThatStartWithACharAndAreAtLeast2CharactersInLength("a")
+  await customerNameThatStartWithACharAndAreAtLeast3CharactersInLength("m")
 );

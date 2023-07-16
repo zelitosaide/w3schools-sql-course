@@ -4,7 +4,7 @@ import dotenv from "dotenv";
 dotenv.config();
 
 export const connection = mysql.createConnection({
-  user: process.env.USER,
+  user: process.env.DB_USER,
   password: process.env.PASSWORD,
   database: process.env.DATABASE,
 });

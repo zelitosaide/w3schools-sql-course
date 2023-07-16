@@ -173,4 +173,23 @@ import {
 //   await customerNameThatStartWithAStringAndEndsWithAString("da", "iel")
 // );
 
-console.log(await customerNameThatDoesNotStartWithAString("z"));
+// console.log(await customerNameThatDoesNotStartWithAString("z"));
+
+import mysql from "mysql";
+import dotenv from "dotenv";
+
+dotenv.config();
+
+const connection = mysql.createConnection({
+  host: process.env.HOST,
+  user: process.env.DB_USER,
+  password: process.env.PASSWORD
+});
+
+connection.connect(function(error) {
+  if (error) throw error;
+  connection.query("CREATE DATABASE users;", function(error, result) {
+    if (error) throw error;
+    console.log(result);
+  });
+});
